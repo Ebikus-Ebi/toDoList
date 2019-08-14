@@ -1,0 +1,149 @@
+body{
+	margin:0;
+	min-width: 300px;
+	background-color: black;
+	
+	/* Moblie App size*/
+	width: 65%;
+	align-content: center;
+	padding-left: 30%;
+}
+
+*{
+	box-sizing: border-box;
+}
+
+.the-header{
+	background-color: #2b93bd;
+	padding: 30px 42px;
+	color: white;
+	text-align: center;
+	/*border-radius: 30px;*/
+	border-radius-top: 20px;
+}
+
+.the-header:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+#the-input{
+	width: 70%;
+	padding: 10px;
+	float: left;
+	font-size: 15px;
+	margin: 0;
+	border:none;
+	border-radius: 50px;  
+	text-align:center;
+
+}
+
+.create-button {
+	padding: 10px;
+	font-size: 15px;
+	width: 25%;
+	color: black;
+	float: left;
+	background-color: #ccc;
+	text-align: center;
+	cursor: pointer;
+	border-radius: 0;
+	-webkit-transition: 0.4s;
+	-ms-transition: 0.4s;
+	-o-transition: 0.4s;
+	transition: 0.4s;
+	border-radius: 50px;
+	/*padding-left: 2px;*/
+
+}
+
+.create-button:hover{
+	background-color: grey;
+	color:white;
+
+}
+
+/*Styling the list items*/
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+ul li{
+	position: relative;
+	background-color: #f36f6f;
+	list-style-type: none;
+	cursor: pointer; 
+	padding: 10px 6px 10px 40px;
+	transition: 0.3s;
+
+	/* Making list unselectable*/
+
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+ul li:nth-child(odd){
+	 background-color: #f36f6f;
+}
+ul li.checked{
+	background: green;
+	color: white;
+	text-decoration: underline;
+
+}
+
+
+ul li.checked::before {
+	content: '';
+	position: absolute;
+	border-color: white;
+	border-style: solid;
+	border-width: 0 2px 2px 0;
+	top: 10px
+	left:15px;
+	transform: rotate(45deg);
+	height:15px;
+	width: 10px; 
+}
+
+
+ul li:hover{
+	background-color: #ddd;
+}
+
+.close{
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 10px 15px 10px 15px;
+
+}
+
+.close:hover {
+	background: #f43c2f;
+}
+
+#ul-body{
+	float: center;
+	background-color: white;
+	/*color: white;*/
+	/*border-style: ridge;
+	border-width: 10%;
+	border-color: red;*/
+	padding-bottom: 300px;
+}
+#p{
+	color: white;
+	background-color: white;
+}
+
+footer{
+	background-color: #2b93bd;
+	align-content: center;
+	color: white;
+	padding: 20px;
+}
