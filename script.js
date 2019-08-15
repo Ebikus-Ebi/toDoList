@@ -24,7 +24,19 @@ function createNewElement() {
 	thePanTag.appendChild(txt);
 	li.appendChild(thePanTag);
 
-	//Removing items when clicked
+
+	//Close button
+var closeButton = document.querySelectorAll(".close");
+	console.log(closeButton);
+//Removing items when clicked
+	for(i = 0; i < closeButton.length; i++){
+		closeButton[i].onclick = function(){
+			var Div = this.parentElement;
+			Div.style.display = "none";
+		}
+	}
+
+	// Removing items when clicked
 	// var closeButton = document.querySelectorAll(".close");
 	// console.log(closeButton);
 	// for (i = 0; i<closeButton.lenght; i++){
@@ -35,9 +47,6 @@ function createNewElement() {
 	// }
 
 }
-
-
-
 
 //creating close button
 //var closeButton = document.getElementsByClassName("close");
@@ -52,16 +61,6 @@ for( index = 0; index < myList.length; index++){
 	myList[index].appendChild(aSpanTag);
 }
 
-//Close button
-var closeButton = document.getElementsByClassName("close");
-	
-//Removing items when clicked
-	for (i = 0; i < closeButton.length; i++){
-		closeButton[i].onclick = function(){
-			var theDiv = this.parentElement;
-			theDiv.style.display = "none";
-		}
-	}
 
 
 //creating checked todo
@@ -72,3 +71,5 @@ ulList.addEventListener('click', function(event){
 		event.target.classList.toggle('checked');
 	}
 }, false);
+
+
